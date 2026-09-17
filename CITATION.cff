@@ -13,3 +13,4 @@ keywords:
   - GROMACS
   - computational chemistry
   - reproducible research
+repository-code: "https://github.com/uhlanoong-kit/protein-ligand-md"
