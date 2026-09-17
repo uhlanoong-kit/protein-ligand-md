@@ -1,0 +1,20 @@
+project:
+  title: Protein-ligand molecular dynamics benchmark
+  status: design
+
+systems:
+  benzene_bound:
+    pdb_id: 4W52
+    ligand_resname: BNZ
+    role: protein-ligand benchmark
+    structure_source: RCSB PDB
+    preparation_status: pending_audit
+
+pending_decisions:
+  - chain selection
+  - biological assembly
+  - retained crystallographic waters
+  - protein protonation states
+  - ligand charge model and atom types
+  - force field and water model
+  - number and duration of production replicas

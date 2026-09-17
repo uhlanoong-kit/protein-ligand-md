@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this workflow, please cite this repository and the original structure sources."
+title: "Protein-Ligand Molecular Dynamics: A Reproducible Analysis Pipeline"
+type: software
+authors:
+  - name: "Uhlanoong"
+version: 0.1.0
+date-released: 2026-09-17
+license: MIT
+keywords:
+  - molecular dynamics
+  - protein-ligand interactions
+  - GROMACS
+  - computational chemistry
+  - reproducible research

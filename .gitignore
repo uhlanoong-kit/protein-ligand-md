@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Local configuration
+.env
+.DS_Store
+*.bak
+*~
+
+# Downloaded and derived structures
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Molecular dynamics trajectories and binaries
+*.xtc
+*.trr
+*.tng
+*.cpt
+*.edr
+*.tpr
+*.gro
+*.trj
+*.dcd
+*.nc
+
+# Large or generated topology artifacts
+*.prmtop
+*.inpcrd
+*.rst7
+*.top
+*.itp
+
+# Quantum chemistry scratch/checkpoint files
+*.chk
+*.fchk
+*.rwf
+
+# Generated analysis outputs
+results/raw/*
+!results/raw/.gitkeep
+

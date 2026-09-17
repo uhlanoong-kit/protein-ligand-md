@@ -1,0 +1,16 @@
+analysis:
+  time_unit: ns
+  protein_selection: "protein"
+  backbone_selection: "backbone"
+  ligand_selection: "resname BNZ"
+  contact_cutoff_angstrom: 4.0
+  hydrogen_bond_distance_angstrom: 3.5
+  hydrogen_bond_angle_degrees: 150
+
+replicates:
+  expected: 3
+  analyze_separately: true
+
+notes:
+  - Confirm the BNZ ligand residue name during the structure audit.
+  - Report per-replica results before pooled summaries.
