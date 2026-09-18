@@ -43,3 +43,24 @@
 - [ ] figures can be regenerated from committed code
 - [ ] interpretation does not exceed the available sampling
 
+## 4W52 manual audit notes
+
+### Observed
+
+- Structure contains one protein author chain, chain A.
+- Biological assembly is monomeric.
+- Deposited construct contains the L99A mutation.
+- Ligand BNZ contains six atoms at residue 200.
+- Deposited BNZ occupancy is 0.70.
+- Structure contains 15 EPE atoms.
+- Structure contains 146 crystallographic water atoms.
+- Thirteen protein residues contain alternate conformations.
+- Residues 165–172 are unobserved in the coordinates.
+
+### Pending decisions
+
+- Select one conformation for each alternate-location residue.
+- Determine whether EPE should be removed.
+- Determine which crystallographic waters should be retained.
+- Omit or model the unobserved C-terminal residues.
+
