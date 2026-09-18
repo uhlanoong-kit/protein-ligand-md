@@ -81,6 +81,10 @@
 * BNZ has a formal charge of 0.
 * All six deposited BNZ carbon atoms have occupancy 0.70.
 * The authoritative component definition is the [RCSB PDB Chemical Component Dictionary entry for BNZ](https://www.rcsb.org/ligand/BNZ).
+* The last residue with deposited coordinates is LEU164.
+* The entirely unobserved C-terminal extension comprises LEU165, GLU166, and HIS167–HIS172.
+* The six consecutive histidines are consistent with a C-terminal affinity-tag extension.
+
 
 
 
@@ -91,13 +95,15 @@
 * Preserve the original file at `data/raw/4W52.cif`; all coordinate modifications will be made in derived preparation files.
 * Remove EPE A201 from the derived simulation structure. EPE is crystallization-solution HEPES, is not the target ligand, and has no atom within 5.0 Å of BNZ.
 * Remove all 146 deposited crystallographic waters from the derived preparation structure. No deposited water is within 5.0 Å of BNZ. The system will subsequently be solvated using an explicit water model compatible with the selected protein force field.
+* Omit the entirely unobserved C-terminal extension, residues 165–172, from the simulation structure rather than generating unsupported coordinates.
+* Treat LEU164 as the final modeled protein residue; its terminal protonation state will be assigned during protein preparation.
+
 
 
 
 ### Pending decisions
 
 * Visually inspect MET1, ARG14, ARG119, and ARG125 before applying an A/B tie-breaking rule.
-* Decide whether to omit or model the unobserved C-terminal residues 165–172.
 * Select and document a reproducible method for reconstructing the 18 missing side-chain heavy atoms.
 * Select and document a force-field-compatible BNZ parameterization method.
 * Determine protein and ligand protonation states.
