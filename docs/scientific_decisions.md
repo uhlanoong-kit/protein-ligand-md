@@ -9,3 +9,4 @@ with a final project setting.
 | 2026-09-17 | Begin with one benzene-bound system | Keeps the first public release scientifically focused and reproducible | Selected | Compare independent replicas rather than unmatched structures |
 | 2026-09-17 | Plan three independent replicas | Need to assess stochastic variation | Planned | Compute requirements must be estimated |
 | 2026-09-17 | Do not report binding affinity from standard MD | Conventional short MD does not directly establish affinity | Final | Focus analysis on dynamics and interactions |
+| 2026-09-18 | Retain alternate conformer A throughout 4W52 | A has higher occupancy for nine residues; four A/B ties were visually inspected, with A used as a deterministic tie-breaker | Selected | Produces one reproducible coordinate set for preparation |
