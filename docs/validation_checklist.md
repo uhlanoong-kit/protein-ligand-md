@@ -71,17 +71,24 @@
 * No internal protein backbone residue is completely missing.
 * Conformer A has higher occupancy for THR21, ASN53, VAL57, ASP61, ASN68, MET106, THR109, MET120, and ARG154.
 * MET1, ARG14, ARG119, and ARG125 have equal A/B occupancies of 0.50.
+* EPE A201 is one HEPES molecule containing 15 deposited atom records, each with occupancy 1.00.
+* HEPES was present in the crystallization solution.
+* Protein residues within 4.0 Å of EPE are GLY30, HIS31, LEU32, LYS35, ASP70, PHE104, GLN105, MET106, and GLY107.
+* No EPE atom is within 5.0 Å of the BNZ ligand.
+* Visual evidence is recorded in `results/figures/structure_audit/4W52_EPE_environment.png`.
+
 
 ### Selected decisions
 
 * Use author chain A and biological assembly 1 because the deposited biological assembly is monomeric and chain A is the only protein chain.
 * Retain conformer A for the nine alternate-location residues for which conformer A has higher occupancy.
 * Preserve the original file at `data/raw/4W52.cif`; all coordinate modifications will be made in derived preparation files.
+* Remove EPE A201 from the derived simulation structure. EPE is crystallization-solution HEPES, is not the target ligand, and has no atom within 5.0 Å of BNZ.
+
 
 ### Pending decisions
 
 * Visually inspect MET1, ARG14, ARG119, and ARG125 before applying an A/B tie-breaking rule.
-* Determine whether EPE will be removed during preparation.
 * Determine which crystallographic waters, if any, will be retained.
 * Decide whether to omit or model the unobserved C-terminal residues 165–172.
 * Select and document a reproducible method for reconstructing the 18 missing side-chain heavy atoms.

@@ -10,3 +10,4 @@ with a final project setting.
 | 2026-09-17 | Plan three independent replicas | Need to assess stochastic variation | Planned | Compute requirements must be estimated |
 | 2026-09-17 | Do not report binding affinity from standard MD | Conventional short MD does not directly establish affinity | Final | Focus analysis on dynamics and interactions |
 | 2026-09-18 | Retain alternate conformer A throughout 4W52 | A has higher occupancy for nine residues; four A/B ties were visually inspected, with A used as a deterministic tie-breaker | Selected | Produces one reproducible coordinate set for preparation |
+| 2026-09-18 | Remove EPE A201 from the derived 4W52 simulation structure | EPE is crystallization-solution HEPES; it contacts the protein but has no atom within 5.0 Å of BNZ and is not the target ligand | Selected | Avoids parameterizing an unrelated buffer component |
