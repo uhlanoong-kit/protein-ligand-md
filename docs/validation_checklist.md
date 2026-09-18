@@ -7,7 +7,7 @@
 * [ ] Mutations and construct differences compared
 * [x] Missing residues, missing atoms, and alternate locations documented
 * [ ] Ligand identity, bond orders, formal charge, and occupancy checked
-* [ ] Retained or removed waters documented
+* [x] Retained or removed waters documented
 * [ ] Protonation decisions recorded
 
 ## Topology
@@ -76,6 +76,8 @@
 * Protein residues within 4.0 Å of EPE are GLY30, HIS31, LEU32, LYS35, ASP70, PHE104, GLN105, MET106, and GLY107.
 * No EPE atom is within 5.0 Å of the BNZ ligand.
 * Visual evidence is recorded in `results/figures/structure_audit/4W52_EPE_environment.png`.
+* No deposited crystallographic water is within 5.0 Å of the BNZ ligand.
+
 
 
 ### Selected decisions
@@ -84,12 +86,13 @@
 * Retain conformer A for the nine alternate-location residues for which conformer A has higher occupancy.
 * Preserve the original file at `data/raw/4W52.cif`; all coordinate modifications will be made in derived preparation files.
 * Remove EPE A201 from the derived simulation structure. EPE is crystallization-solution HEPES, is not the target ligand, and has no atom within 5.0 Å of BNZ.
+* Remove all 146 deposited crystallographic waters from the derived preparation structure. No deposited water is within 5.0 Å of BNZ. The system will subsequently be solvated using an explicit water model compatible with the selected protein force field.
+
 
 
 ### Pending decisions
 
 * Visually inspect MET1, ARG14, ARG119, and ARG125 before applying an A/B tie-breaking rule.
-* Determine which crystallographic waters, if any, will be retained.
 * Decide whether to omit or model the unobserved C-terminal residues 165–172.
 * Select and document a reproducible method for reconstructing the 18 missing side-chain heavy atoms.
 * Verify the BNZ chemical structure, bond orders, formal charge, and parameterization method.
