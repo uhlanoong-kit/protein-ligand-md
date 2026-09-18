@@ -6,7 +6,7 @@
 * [x] Chain and biological assembly justified
 * [ ] Mutations and construct differences compared
 * [x] Missing residues, missing atoms, and alternate locations documented
-* [ ] Ligand identity, bond orders, formal charge, and occupancy checked
+* [x] Ligand identity, bond orders, formal charge, and occupancy checked
 * [x] Retained or removed waters documented
 * [ ] Protonation decisions recorded
 
@@ -59,24 +59,28 @@
 * The structure contains one protein author chain, chain A.
 * The deposited biological assembly is monomeric.
 * The deposited construct contains the L99A mutation.
-* BNZ residue 200 contains six deposited carbon-atom records; ligand hydrogen atoms are not present.
-* The deposited occupancy of every BNZ atom is 0.70.
-* The structure contains 15 deposited EPE atom records.
-* The structure contains 146 deposited HOH oxygen records, representing 146 crystallographic waters.
 * Thirteen protein residues contain alternate conformations.
+* Conformer A has higher occupancy for THR21, ASN53, VAL57, ASP61, ASN68, MET106, THR109, MET120, and ARG154.
+* MET1, ARG14, ARG119, and ARG125 have equal A/B occupancies of 0.50.
 * Residues 165–172 are unobserved in the deposited coordinates.
 * The unobserved C-terminal residues are LEU165, GLU166, and HIS167–HIS172.
 * Eighteen protein side-chain heavy atoms are unobserved.
 * The residues affected by missing side-chain atoms are LYS16, LYS60, ARG80, ARG125, LYS147, LYS162, and ASN163.
 * No internal protein backbone residue is completely missing.
-* Conformer A has higher occupancy for THR21, ASN53, VAL57, ASP61, ASN68, MET106, THR109, MET120, and ARG154.
-* MET1, ARG14, ARG119, and ARG125 have equal A/B occupancies of 0.50.
 * EPE A201 is one HEPES molecule containing 15 deposited atom records, each with occupancy 1.00.
 * HEPES was present in the crystallization solution.
 * Protein residues within 4.0 Å of EPE are GLY30, HIS31, LEU32, LYS35, ASP70, PHE104, GLN105, MET106, and GLY107.
-* No EPE atom is within 5.0 Å of the BNZ ligand.
+* No EPE atom is within 5.0 Å of BNZ.
 * Visual evidence is recorded in `results/figures/structure_audit/4W52_EPE_environment.png`.
-* No deposited crystallographic water is within 5.0 Å of the BNZ ligand.
+* The structure contains 146 deposited HOH oxygen records, representing 146 crystallographic waters.
+* No deposited crystallographic water is within 5.0 Å of BNZ.
+* BNZ residue A200 is benzene with molecular formula C6H6 and molecular weight 78.112 Da.
+* The complete BNZ component definition contains six carbon atoms and six hydrogen atoms.
+* The deposited coordinates contain the six BNZ carbon atoms but omit the ligand hydrogen atoms.
+* The BNZ carbon atoms form an aromatic ring represented by alternating single and double bonds.
+* BNZ has a formal charge of 0.
+* All six deposited BNZ carbon atoms have occupancy 0.70.
+* The authoritative component definition is the [RCSB PDB Chemical Component Dictionary entry for BNZ](https://www.rcsb.org/ligand/BNZ).
 
 
 
@@ -95,5 +99,5 @@
 * Visually inspect MET1, ARG14, ARG119, and ARG125 before applying an A/B tie-breaking rule.
 * Decide whether to omit or model the unobserved C-terminal residues 165–172.
 * Select and document a reproducible method for reconstructing the 18 missing side-chain heavy atoms.
-* Verify the BNZ chemical structure, bond orders, formal charge, and parameterization method.
+* Select and document a force-field-compatible BNZ parameterization method.
 * Determine protein and ligand protonation states.
