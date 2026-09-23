@@ -8,7 +8,7 @@
 * [x] Missing residues, missing atoms, and alternate locations documented
 * [x] Ligand identity, bond orders, formal charge, and occupancy checked
 * [x] Retained or removed waters documented
-* [ ] Protonation decisions recorded
+* [x] Protonation decisions recorded
 
 ## Topology
 
@@ -138,4 +138,3 @@
 ### Pending decisions
 
 * Retain conformer A for all 13 alternate-location residues. Conformer A has higher occupancy for nine residues; MET1, ARG14, ARG119, and ARG125 were visually inspected, and conformer A was selected as the deterministic tie-breaker for their equal A/B occupancies.
-* Determine protein and ligand protonation states.

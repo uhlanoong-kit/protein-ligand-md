@@ -57,3 +57,29 @@ For OPC, it loads `frcmod.opc` and `frcmod.ionslm_126_opc`.
 Compatibility remains provisional until a combined protein–BNZ topology is
 generated, converted to GROMACS format, and checked for missing parameters,
 atom-count consistency, and conversion warnings.
+
+## Selected protonation states
+
+Protonation states were assessed for a target pH of 7.5, matching the
+deposited crystallization pH. PROPKA 3.5.1 was run on the prepared heavy-atom
+structure.
+
+- ASP and GLU residues are deprotonated.
+- LYS and ARG residues are protonated.
+- TYR residues remain neutral.
+- CYS54 and CYS97 remain neutral thiols. Their sulfur atoms are 29.181 Å
+  apart, excluding a disulfide bond.
+- MET1 uses a positively charged N-terminus.
+- LEU164 uses a negatively charged C-terminus.
+- BNZ remains neutral.
+- HIS31 is assigned the neutral Amber `HID` state, with its proton on ND1.
+
+PROPKA predicted a pKa of 7.34 for HIS31. At pH 7.5, the neutral form is the
+majority state, although the predicted value indicates meaningful uncertainty.
+The 2.728 Å HIS31 ND1–ASP70 OD2 distance supports an ND1-H hydrogen bond and
+therefore the `HID` tautomer.
+
+PROPKA reported a terminal-group warning for LEU164, but manual inspection
+confirmed that both O and OXT are present. Their C–O distances are 1.233 and
+1.267 Å, respectively. The warning was therefore reviewed and does not indicate
+a missing terminal oxygen.
