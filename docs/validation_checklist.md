@@ -103,6 +103,19 @@
 * Prevent reconstruction of the unobserved C-terminal residues 165–172 by clearing PDBFixer’s missing-residue list before adding missing atoms.
 * Add hydrogens only after protein and ligand protonation states have been determined.
 
+### Derived-structure verification
+
+- `scripts/03_prepare_4W52.py` generates `data/processed/4W52_prepared_heavy_atoms.pdb` without modifying the raw mmCIF.
+- The derived structure contains 1,306 protein heavy atoms and the six deposited BNZ carbon atoms.
+- EPE and all crystallographic waters are absent from the derived structure.
+- PDBFixer loaded and removed 128 waters without alternate locations. The remaining deposited water records comprise nine A and nine B alternate-location records that were not loaded.
+- The derived protein begins at MET1 and ends at LEU164; residues 165–172 were not reconstructed.
+- PDBFixer reconstructed exactly 18 missing side-chain heavy atoms.
+- A second PDBFixer inspection detected zero remaining missing nonterminal heavy atoms and zero missing terminal atoms.
+- All 71 deposited protein conformer-A atom records matched the derived coordinates, with no coordinate deviation above 0.002 Å.
+- No hydrogens were added at this preparation stage.
+- The generated PDB is an intermediate coordinate artifact and remains excluded from version control because it can be reproduced from the committed raw structure and preparation script.
+
 
 
 ### Pending decisions
