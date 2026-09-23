@@ -14,7 +14,7 @@
 
 * [ ] Protein and ligand force fields are compatible
 * [ ] Coordinate and topology atom counts match
-* [ ] Ligand charge and atom types checked
+* [x] Ligand charge and atom types checked
 * [ ] No unexplained missing parameters
 * [ ] Topology warnings reviewed individually
 
@@ -92,6 +92,15 @@
 * The mmCIF labels GLY12/ARG12 and ARG137/ILE137 as variants and specifically labels L99A as the engineered mutation.
 * Residues 165–172 are explicitly identified as the expression tag `LEHHHHHH`.
 * Therefore, residues 1–164 represent the T4 lysozyme construct containing the two deposited sequence variants and the engineered L99A substitution, followed by an eight-residue C-terminal expression tag.
+* A chemically complete BNZ model contains six deposited carbons and six reproducibly added hydrogens.
+* The completed BNZ geometry contains six aromatic C–C bonds and six C–H bonds; its C–C distances are 1.3816–1.4001 Å and its C–H distances are 1.0900 Å.
+* BNZ was parameterized using GAFF2 and AM1-BCC with AmberTools 23.3.
+* GAFF2 assigned six `ca` carbon atoms and six `ha` hydrogen atoms.
+* Each carbon has charge -0.130000 and each hydrogen has charge +0.130000, giving total charge 0.000000.
+* `parmchk2` supplied one generalized `ca-ca-ca-ha` improper term from `X-X-ca-ha` with penalty score 6.0.
+* TLeap applied six improper torsions and reported zero errors, zero warnings, and zero notes.
+* ParmEd confirmed 12 atoms, one residue, 12 bonds, 18 angles, 30 dihedral entries, and total charge 0.000000.
+* `scripts/05_parameterize_bnz.sh` reproduced files identical to the committed verified BNZ parameters.
 
 
 
@@ -107,6 +116,7 @@
 * Use PDBFixer 1.12 to reconstruct the 18 missing side-chain heavy atoms.
 * Prevent reconstruction of the unobserved C-terminal residues 165–172 by clearing PDBFixer’s missing-residue list before adding missing atoms.
 * Add hydrogens only after protein and ligand protonation states have been determined.
+- Parameterize neutral BNZ using GAFF2 atom types and AM1-BCC charges with AmberTools 23.3.
 
 ### Derived-structure verification
 
@@ -126,5 +136,4 @@
 ### Pending decisions
 
 * Retain conformer A for the nine alternate-location residues for which conformer A has higher occupancy.Retain conformer A for all 13 alternate-location residues. Conformer A has higher occupancy for nine residues; MET1, ARG14, ARG119, and ARG125 were visually inspected, and conformer A was selected as the deterministic tie-breaker for their equal A/B occupancies.
-* Select and document a force-field-compatible BNZ parameterization method.
 * Determine protein and ligand protonation states.

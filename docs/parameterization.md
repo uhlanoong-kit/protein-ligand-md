@@ -31,3 +31,16 @@ For benzene, record:
 
 No ligand topology is committed in the design-stage release because it has not
 yet been generated and independently verified.
+
+## Selected BNZ method
+
+BNZ is parameterized as neutral benzene using GAFF2 atom types and AM1-BCC
+charges with AmberTools 23.3. The deposited six-carbon coordinates are retained,
+and six hydrogens are added by `scripts/04_prepare_bnz.py`.
+
+The complete parameterization and validation workflow is implemented by
+`scripts/05_parameterize_bnz.sh`. Verified files and detailed provenance are
+stored under `parameters/bnz/`.
+
+Selection of the compatible AMBER protein force field and water model remains
+pending.
