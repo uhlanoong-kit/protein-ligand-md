@@ -42,9 +42,6 @@ The complete parameterization and validation workflow is implemented by
 `scripts/05_parameterize_bnz.sh`. Verified files and detailed provenance are
 stored under `parameters/bnz/`.
 
-Selection of the compatible AMBER protein force field and water model remains
-pending.
-
 ## Selected force-field stack
 
 - Protein: Amber ff19SB from AmberTools 23.3.

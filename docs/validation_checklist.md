@@ -137,5 +137,5 @@
 
 ### Pending decisions
 
-* Retain conformer A for the nine alternate-location residues for which conformer A has higher occupancy.Retain conformer A for all 13 alternate-location residues. Conformer A has higher occupancy for nine residues; MET1, ARG14, ARG119, and ARG125 were visually inspected, and conformer A was selected as the deterministic tie-breaker for their equal A/B occupancies.
+* Retain conformer A for all 13 alternate-location residues. Conformer A has higher occupancy for nine residues; MET1, ARG14, ARG119, and ARG125 were visually inspected, and conformer A was selected as the deterministic tie-breaker for their equal A/B occupancies.
 * Determine protein and ligand protonation states.
