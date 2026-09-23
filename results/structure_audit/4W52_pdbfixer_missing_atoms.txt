@@ -1,0 +1,15 @@
+Missing residue blocks:
+chain_index=0 insertion_index=164 residues=LEU,GLU,HIS,HIS,HIS,HIS,HIS,HIS
+
+Missing nonterminal heavy atoms:
+chain=A residue=LYS16 atoms=NZ
+chain=A residue=LYS60 atoms=NZ
+chain=A residue=ARG80 atoms=CG,CD,NE,CZ,NH1,NH2
+chain=A residue=ARG125 atoms=CZ,NH1,NH2
+chain=A residue=LYS147 atoms=NZ
+chain=A residue=LYS162 atoms=CD,CE,NZ
+chain=A residue=ASN163 atoms=CG,OD1,ND2
+Total missing nonterminal heavy atoms: 18
+
+Missing terminal atoms:
+Total missing terminal atoms: 0
