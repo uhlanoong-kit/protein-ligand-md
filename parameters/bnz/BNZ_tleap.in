@@ -1,0 +1,12 @@
+source leaprc.gaff2
+
+BNZ = loadmol2 BNZ_gaff2.mol2
+loadamberparams BNZ_gaff2.frcmod
+
+check BNZ
+charge BNZ
+
+saveamberparm BNZ BNZ_gaff2.prmtop BNZ_gaff2.inpcrd
+savepdb BNZ BNZ_gaff2.pdb
+
+quit
