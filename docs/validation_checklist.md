@@ -84,7 +84,9 @@
 * The last residue with deposited coordinates is LEU164.
 * The entirely unobserved C-terminal extension comprises LEU165, GLU166, and HIS167–HIS172.
 * The six consecutive histidines are consistent with a C-terminal affinity-tag extension.
-
+* PDBFixer 1.12 independently detected residues 165–172 as one missing C-terminal residue block.
+* PDBFixer detected exactly the 18 previously documented missing side-chain heavy atoms.
+* PDBFixer detected no missing terminal atoms.
 
 
 
@@ -97,13 +99,14 @@
 * Remove all 146 deposited crystallographic waters from the derived preparation structure. No deposited water is within 5.0 Å of BNZ. The system will subsequently be solvated using an explicit water model compatible with the selected protein force field.
 * Omit the entirely unobserved C-terminal extension, residues 165–172, from the simulation structure rather than generating unsupported coordinates.
 * Treat LEU164 as the final modeled protein residue; its terminal protonation state will be assigned during protein preparation.
-
+* Use PDBFixer 1.12 to reconstruct the 18 missing side-chain heavy atoms.
+* Prevent reconstruction of the unobserved C-terminal residues 165–172 by clearing PDBFixer’s missing-residue list before adding missing atoms.
+* Add hydrogens only after protein and ligand protonation states have been determined.
 
 
 
 ### Pending decisions
 
-* Visually inspect MET1, ARG14, ARG119, and ARG125 before applying an A/B tie-breaking rule.
-* Select and document a reproducible method for reconstructing the 18 missing side-chain heavy atoms.
+* Retain conformer A for the nine alternate-location residues for which conformer A has higher occupancy.Retain conformer A for all 13 alternate-location residues. Conformer A has higher occupancy for nine residues; MET1, ARG14, ARG119, and ARG125 were visually inspected, and conformer A was selected as the deterministic tie-breaker for their equal A/B occupancies.
 * Select and document a force-field-compatible BNZ parameterization method.
 * Determine protein and ligand protonation states.
