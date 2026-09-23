@@ -4,7 +4,7 @@
 
 * [x] PDB/mmCIF identity and citation recorded
 * [x] Chain and biological assembly justified
-* [ ] Mutations and construct differences compared
+* [x] Mutations and construct differences compared
 * [x] Missing residues, missing atoms, and alternate locations documented
 * [x] Ligand identity, bond orders, formal charge, and occupancy checked
 * [x] Retained or removed waters documented
@@ -87,6 +87,11 @@
 * PDBFixer 1.12 independently detected residues 165–172 as one missing C-terminal residue block.
 * PDBFixer detected exactly the 18 previously documented missing side-chain heavy atoms.
 * PDBFixer detected no missing terminal atoms.
+* The deposited construct is aligned to UniProt P00720 in the mmCIF reference-sequence records.
+* Relative to UniProt P00720, the deposited construct contains GLY12 instead of ARG12, ALA99 instead of LEU99, and ARG137 instead of ILE137.
+* The mmCIF labels GLY12/ARG12 and ARG137/ILE137 as variants and specifically labels L99A as the engineered mutation.
+* Residues 165–172 are explicitly identified as the expression tag `LEHHHHHH`.
+* Therefore, residues 1–164 represent the T4 lysozyme construct containing the two deposited sequence variants and the engineered L99A substitution, followed by an eight-residue C-terminal expression tag.
 
 
 
