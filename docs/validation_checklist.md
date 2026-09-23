@@ -116,7 +116,9 @@
 * Use PDBFixer 1.12 to reconstruct the 18 missing side-chain heavy atoms.
 * Prevent reconstruction of the unobserved C-terminal residues 165–172 by clearing PDBFixer’s missing-residue list before adding missing atoms.
 * Add hydrogens only after protein and ligand protonation states have been determined.
-- Parameterize neutral BNZ using GAFF2 atom types and AM1-BCC charges with AmberTools 23.3.
+* Parameterize neutral BNZ using GAFF2 atom types and AM1-BCC charges with AmberTools 23.3.
+* Use Amber ff19SB for the protein, GAFF2 with AM1-BCC charges for BNZ, and OPC water with OPC-compatible ion parameters.
+* Treat force-field compatibility as provisional until the combined topology has been generated and validated in GROMACS.
 
 ### Derived-structure verification
 

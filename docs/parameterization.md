@@ -44,3 +44,19 @@ stored under `parameters/bnz/`.
 
 Selection of the compatible AMBER protein force field and water model remains
 pending.
+
+## Selected force-field stack
+
+- Protein: Amber ff19SB from AmberTools 23.3.
+- Ligand: GAFF2 with AM1-BCC charges generated using AmberTools 23.3.
+- Water: OPC.
+- Ions: OPC-compatible Li/Merz parameters loaded by `leaprc.water.opc`.
+- Target simulation engine: GROMACS 2026.2.
+
+The local AmberTools installation loads `frcmod.ff19SB`,
+`amino19.lib`, `aminoct12.lib`, and `aminont12.lib` for ff19SB.
+For OPC, it loads `frcmod.opc` and `frcmod.ionslm_126_opc`.
+
+Compatibility remains provisional until a combined protein–BNZ topology is
+generated, converted to GROMACS format, and checked for missing parameters,
+atom-count consistency, and conversion warnings.
