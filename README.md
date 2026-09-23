@@ -146,3 +146,32 @@ validation. See [docs/limitations.md](docs/limitations.md).
 The original code and documentation in this repository are released under the
 [MIT License](LICENSE). Downloaded structures and third-party tools remain
 subject to their respective terms and citation requirements.
+
+## Current status
+
+The repository is under active development using the T4 lysozyme L99A–benzene complex (PDB 4W52) as the initial benchmark.
+
+Completed:
+
+* reproducible Conda environment and automated tests;
+* structure identity and biological-assembly audit;
+* alternate-conformation assessment;
+* missing-residue and missing-atom documentation;
+* BNZ identity, connectivity, formal-charge, and occupancy checks;
+* crystallographic HEPES and water assessment;
+* documented scientific preparation decisions;
+* installation of PDBFixer and OpenMM.
+
+Current milestone:
+
+* reconstruct the documented missing side-chain heavy atoms;
+* generate and validate a derived 4W52 preparation structure;
+* preserve the raw deposited structure unchanged.
+
+Planned:
+
+* protein protonation assignment;
+* BNZ parameterization;
+* topology generation and validation;
+* minimization, equilibration, production MD, and trajectory analysis.
+
