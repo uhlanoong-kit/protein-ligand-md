@@ -1,0 +1,22 @@
+source leaprc.protein.ff19SB
+source leaprc.gaff2
+source leaprc.water.opc
+
+loadamberparams parameters/bnz/BNZ_gaff2.frcmod
+BNZ = loadmol2 parameters/bnz/BNZ_gaff2.mol2
+
+protein = loadpdb data/processed/4W52_protein_HID.pdb
+complex = combine { protein BNZ }
+
+check protein
+check BNZ
+check complex
+
+charge protein
+charge BNZ
+charge complex
+
+saveamberparm complex data/processed/4W52_complex_dry.prmtop data/processed/4W52_complex_dry.inpcrd
+savepdb complex data/processed/4W52_complex_dry.pdb
+
+quit

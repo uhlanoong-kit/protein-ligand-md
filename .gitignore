@@ -46,3 +46,5 @@ data/processed/*
 results/raw/*
 !results/raw/.gitkeep
 
+# AmberTools/TLeap runtime log
+/leap.log

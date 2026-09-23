@@ -12,11 +12,11 @@
 
 ## Topology
 
-* [ ] Protein and ligand force fields are compatible
-* [ ] Coordinate and topology atom counts match
-* [x] Ligand charge and atom types checked
-* [ ] No unexplained missing parameters
-* [ ] Topology warnings reviewed individually
+- [x] Protein and ligand force fields are compatible
+- [x] Coordinate and topology atom counts match
+- [x] Ligand charge and atom types checked
+- [x] No unexplained missing parameters
+- [x] Topology warnings reviewed individually
 
 ## Simulation
 

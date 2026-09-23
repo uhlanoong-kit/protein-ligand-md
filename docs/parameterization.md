@@ -83,3 +83,34 @@ PROPKA reported a terminal-group warning for LEU164, but manual inspection
 confirmed that both O and OXT are present. Their C–O distances are 1.233 and
 1.267 Å, respectively. The warning was therefore reviewed and does not indicate
 a missing terminal oxygen.
+
+## Dry complex topology validation
+
+TLeap successfully combined the ff19SB protein and GAFF2/AM1-BCC BNZ
+parameters. The dry complex topology contains 2,646 atoms and 165 residues:
+164 protein residues and one BNZ residue.
+
+ParmEd validation reported:
+
+- 2,646 topology atoms and 2,646 coordinate rows;
+- 2,666 bonds;
+- 4,807 angles;
+- 11,728 dihedrals;
+- total complex charge +8;
+- one 12-atom neutral BNZ residue;
+- BNZ atom types of six `ca` and six `ha`;
+- one 17-atom HID residue containing HD1 and no HE2;
+- no missing bonded or nonbonded parameters.
+
+TLeap completed with zero errors. Its warnings were reviewed individually:
+
+- the +8 protein/complex charge is expected and will be neutralized with
+  OPC-compatible counterions;
+- a 1.366 Å contact occurs between newly added MET1 HE3 and HB2;
+- a 1.340 Å contact occurs between newly added GLN105 HE21 and THR142 HG1;
+- the repeated warnings during complex checking and topology writing refer to
+  these same conditions.
+
+The two short contacts involve generated hydrogen atoms. They will be checked
+again after energy minimization and are not treated as resolved simulation
+geometry at this stage.
