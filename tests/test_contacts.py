@@ -17,3 +17,17 @@ def test_summarize_contacts_requires_frames() -> None:
     with pytest.raises(ValueError, match="No trajectory frames"):
         summarize_contacts([], {})
 
+
+
+def test_summarize_contacts_no_contacts_preserves_headers() -> None:
+    table = summarize_contacts([set(), set()], {10: (100, "LEU")})
+    expected = [
+        "residue_number",
+        "residue_name",
+        "contact_frames",
+        "total_frames",
+        "contact_occupancy",
+    ]
+    assert table.empty
+    assert table.columns.tolist() == expected
+    assert table.to_csv(index=False).splitlines() == [",".join(expected)]

@@ -35,7 +35,13 @@ def summarize_contacts(
                 "contact_occupancy": count / len(frame_contacts),
             }
         )
-    return pd.DataFrame(rows)
+    return pd.DataFrame(rows, columns=[
+        "residue_number",
+        "residue_name",
+        "contact_frames",
+        "total_frames",
+        "contact_occupancy",
+    ])
 
 
 def calculate_contact_occupancy(
