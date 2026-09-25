@@ -1,6 +1,6 @@
 project:
   title: Protein-ligand molecular dynamics benchmark
-  status: design
+  status: dry_amber_topology_validated
 
 systems:
   benzene_bound:
@@ -8,13 +8,60 @@ systems:
     ligand_resname: BNZ
     role: protein-ligand benchmark
     structure_source: RCSB PDB
-    preparation_status: pending_audit
+    author_chain: A
+    biological_assembly: 1
+    preparation_status: dry_amber_topology_validated
+
+    structure_preparation:
+      modeled_protein_residues: "1-164"
+      omitted_terminal_residues: "165-172"
+      alternate_conformer: A
+      missing_sidechain_heavy_atoms_rebuilt: 18
+      crystallographic_waters: removed
+      crystallographic_hepes: removed
+
+    protonation:
+      target_ph: 7.5
+      his31_state: HID
+      his31_uncertainty: documented
+      n_terminus: positively_charged
+      c_terminus: negatively_charged
+      ligand_net_charge: 0
+
+    force_fields:
+      protein: ff19SB
+      ligand: GAFF2
+      ligand_charge_method: AM1-BCC
+      selected_water_model: OPC
+      selected_ion_parameters: OPC-compatible Li/Merz
+
+    dry_amber_topology:
+      validation_status: validated
+      atom_count: 2646
+      protein_residue_count: 164
+      ligand_residue_count: 1
+      total_residue_count: 165
+      net_charge: 8
+      geometry_followup: reassess_two_short_hydrogen_contacts_after_minimization
+
+    simulation:
+      target_engine: GROMACS
+      target_version: "2026.2"
+      solvation_status: pending
+      gromacs_conversion_status: pending
+      minimization_status: not_started
+      equilibration_status: not_started
+      production_status: not_started
+      planned_replicas: 3
+      production_duration_ns: null
+
+evidence:
+  - docs/scientific_decisions.md
+  - docs/parameterization.md
+  - docs/validation_checklist.md
 
 pending_decisions:
-  - chain selection
-  - biological assembly
-  - retained crystallographic waters
-  - protein protonation states
-  - ligand charge model and atom types
-  - force field and water model
-  - number and duration of production replicas
+  - box geometry and solvent padding
+  - salt concentration
+  - final production duration per replica
+  - explicit independent velocity seeds
