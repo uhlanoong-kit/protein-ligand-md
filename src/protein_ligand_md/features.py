@@ -13,7 +13,13 @@ from .xvg import read_xvg
 def build_feature_table(rmsf_path: str | Path, sasa_path: str | Path) -> pd.DataFrame:
     """Merge per-residue RMSF and SASA values using residue number."""
     rmsf = read_xvg(rmsf_path, columns=["residue_number", "rmsf_nm"])
-    sasa = read_xvg(sasa_path, columns=["residue_number", "sasa_nm2"])
+    sasa = read_xvg(sasa_path)
+    if sasa.shape[1] == 2:
+        sasa.columns = ["residue_number", "sasa_nm2"]
+    elif sasa.shape[1] == 3:
+        sasa.columns = ["residue_number", "sasa_nm2", "sasa_std_nm2"]
+    else:
+        raise ValueError("SASA input must contain 2 or 3 columns")
 
     for frame in (rmsf, sasa):
         frame["residue_number"] = frame["residue_number"].astype(int)
