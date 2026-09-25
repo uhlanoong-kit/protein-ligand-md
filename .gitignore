@@ -48,3 +48,6 @@ results/raw/*
 
 # AmberTools/TLeap runtime log
 /leap.log
+
+# Local editor settings
+.vscode/
