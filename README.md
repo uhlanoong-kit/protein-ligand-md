@@ -131,8 +131,8 @@ Build and validate the solvated system before starting equilibration:
 ```bash
 conda env create -f environment.yml
 conda activate protein-ligand-md
-make download
-make test
+bash data/download_structures.sh
+python -m pytest
 ```
 
 The download step retrieves public coordinate files only. It does not create a

@@ -5,7 +5,7 @@
 Run:
 
 ```bash
-make download
+bash data/download_structures.sh
 ```
 
 Retain the downloaded files unchanged in `data/raw/`.
