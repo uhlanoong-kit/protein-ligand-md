@@ -30,6 +30,26 @@
 
 `parmchk2` supplied one generalized aromatic improper term:
 
-```text
-ca-ca-ca-ha  1.1  180.0  2.0
-validation remain pending.
+    ca-ca-ca-ha  1.1  180.0  2.0
+
+The term was assigned from `X-X-ca-ha` with a reported penalty score of 6.0.
+
+## Recorded ligand validation
+
+- TLeap reported zero errors, zero warnings, and zero notes for isolated BNZ.
+- ParmEd confirmed 12 atoms, one residue, 12 bonds, 18 angles,
+  and 30 dihedral entries.
+- The total ligand charge was 0.000000.
+- Six improper torsions were applied.
+- `scripts/05_parameterize_bnz.sh` reproduced files identical to the
+  committed BNZ parameters.
+
+## Combined-system status
+
+The dry protein-BNZ Amber topology has been validated, as documented in
+[the parameterization report](../../docs/parameterization.md).
+
+Solvation, GROMACS conversion and validation, energy minimization,
+equilibration, and production simulations remain pending. Two short
+contacts involving generated hydrogens in the dry complex must be
+reassessed after minimization.
